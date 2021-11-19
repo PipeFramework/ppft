@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/PipeFramework/ppft/issues"
   },
-  "homepage": "https://github.com/PipeFramework/ppft#readme"
+  "homepage": "https://github.com/PipeFramework/ppft#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "conf": "^10.0.3"
+  }
 }
