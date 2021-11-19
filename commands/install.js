@@ -29,7 +29,7 @@ function install(name) {
         });
 
     } catch (error) {
-        console.log(chalk.red.bold(`The filter "${name}" could not be added`, error.message));
+        console.log(chalk.red.bold(`The project "${name}" could not be installed`, error.message));
     }
 
 }
