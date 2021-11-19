@@ -1,0 +1,23 @@
+{
+  "name": "ppft-cli",
+  "version": "1.0.0",
+  "description": "CLI for PipeFilterFramework, use this CLI to create and manage filters and steps",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PipeFramework/ppft.git"
+  },
+  "keywords": [
+    "client",
+    "interface"
+  ],
+  "author": "Arthur, Auriane et Jerem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PipeFramework/ppft/issues"
+  },
+  "homepage": "https://github.com/PipeFramework/ppft#readme"
+}
