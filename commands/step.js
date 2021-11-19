@@ -20,6 +20,16 @@ function addStep(id, name, next) {
     }
 }
 function deleteStep(id) {
+        //Read the content of the file
+        let text = fs.readFileSync(`config-filters.json`, 'utf-8', (e)=> { if (e) throw (e); });
+        let obj = JSON.parse(text);
+
+        // remove the specified step
+        delete obj.steps[id]
+
+        //Write the new content to the config file
+        fs.writeFileSync(`config-filters.json`, JSON.stringify(obj, null, 4), 'utf-8', (e)=>{if(e)throw(e)});
+
     console.log(chalk.green.bold(`The step "${id}" has been deleted`));
 }
 

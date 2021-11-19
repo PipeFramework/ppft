@@ -1,9 +1,9 @@
 {
     "steps": {
-        "3": {
-            "filter": "test.js",
+        "2": {
+            "filter": "example.js",
             "params": [],
-            "next": "5"
+            "next": "1"
         }
     }
 }
