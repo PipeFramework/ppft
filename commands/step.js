@@ -12,7 +12,7 @@ function addStep(name) {
 
         console.log(chalk.green.bold(`The step "${name}" has been added`));
     } catch (error) {
-        console.log(chalk.red.bold(`Le step "${name}" n'a pas pu être ajouté à cause d'une erreur`));    
+        console.log(chalk.red.bold(`The step "${name}" could not be added`, error.message));
     }
 }
 function deleteStep(name) {
