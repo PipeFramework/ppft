@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 const fs = require('fs');
-const filterContent = 'module.exports = (input) => {\n\t"test";\n};'
+const filterContent = 'module.exports = (input) => {\n\t"insert your code here";\n};'
 
 function addFilter(name) {
     try {
