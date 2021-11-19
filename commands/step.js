@@ -20,7 +20,7 @@ function addStep(id, name, next) {
     }
 }
 function deleteStep(id) {
-    console.log(chalk.red.bold(`The step "${id}" has been deleted`));
+    console.log(chalk.green.bold(`The step "${id}" has been deleted`));
 }
 
 module.exports = {
