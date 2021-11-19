@@ -1,22 +1,26 @@
 const chalk = require('chalk');
 const fs = require('fs');
 
-function addStep(name) {
+function addStep(id, name, next) {
     try {
+        //Read the content of the file
         let text = fs.readFileSync(`config-filters.json`, 'utf-8', (e)=> { if (e) throw (e); });
         let obj = JSON.parse(text);
-        obj.steps[3] = { filter: `${name}.js`, params: [], next: '2'}
 
-        console.log(obj);
+        // add the new content
+        obj.steps[id] = { filter: `${name}.js`, params: [] }
+        if (next !== undefined) obj.steps[id].next = next;
 
+        //Write the new content to the config file
+        fs.writeFileSync(`config-filters.json`, JSON.stringify(obj, null, 4), 'utf-8', (e)=>{if(e)throw(e)});
 
         console.log(chalk.green.bold(`The step "${name}" has been added`));
     } catch (error) {
         console.log(chalk.red.bold(`The step "${name}" could not be added`, error.message));
     }
 }
-function deleteStep(name) {
-    console.log(chalk.red.bold(`The step "${name}" has been deleted`));
+function deleteStep(id) {
+    console.log(chalk.red.bold(`The step "${id}" has been deleted`));
 }
 
 module.exports = {

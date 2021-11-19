@@ -22,12 +22,12 @@ program
     .action(deleteFilter);
 
 program
-    .command('add_step <name>')
+    .command('add_step <id> <name> [next]')
     .description('Add a Step')
     .action(addStep);
 
 program
-    .command('del_step <name>')
+    .command('del_step <id>')
     .description('Delete a Step')
     .action(deleteStep);
 
