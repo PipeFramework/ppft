@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "ppft": "./bin/ppft.js"
+    "ppft": "index.js"
   },
   "repository": {
     "type": "git",
