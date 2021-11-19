@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-function install() {
+function install(name) {
     console.log(chalk.green.bold('Installation réussi'));
 }
 

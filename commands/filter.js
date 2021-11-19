@@ -1,7 +1,13 @@
 const chalk = require('chalk');
 
-function filter(name) {
-    console.log(chalk.green.bold(`Le filtre "${name}" ajouté`));
+function addFilter(name) {
+    console.log(chalk.green.bold(`Le filtre "${name}" a été ajouté`));
+}
+function deleteFilter(name) {
+    console.log(chalk.red.bold(`Le filtre "${name}" a été supprimé`));
 }
 
-module.exports = filter;
+module.exports = {
+    addFilter,
+    deleteFilter
+}

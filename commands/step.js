@@ -1,7 +1,13 @@
 const chalk = require('chalk');
 
-function step() {
-    console.log(chalk.red.bold('Step ajouté'));
+function addStep(name) {
+    console.log(chalk.green.bold(`Le step "${name}" a été ajouté`));
+}
+function deleteStep(name) {
+    console.log(chalk.red.bold(`Le step "${name}" a été supprimé`));
 }
 
-module.exports = step;
+module.exports = {
+    addStep,
+    deleteStep
+}
