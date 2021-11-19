@@ -23,7 +23,7 @@ function install(name) {
         });
 
     } catch (error) {
-        console.log(chalk.red.bold(`The filter "${name}" could not be added`, error.message));
+        console.log(chalk.red.bold(`The project "${name}" could not be installed`, error.message));
     }
 
     console.log(chalk.green.bold(`The projet "${name}" has been successfully installed`));
