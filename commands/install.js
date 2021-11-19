@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 
 function install(name) {
-    console.log(chalk.green.bold(`Le projet "${name}" a été installé avec succès`));
+    console.log(chalk.green.bold(`The projet "${name}" has been successfully installed`));
 }
 
 module.exports = install;

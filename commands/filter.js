@@ -4,16 +4,24 @@ const filterContent = 'module.exports = (input) => {\n\t"test";\n};'
 
 function addFilter(name) {
     try {
-        fs.writeFile(`./filters/${name}.js`, filterContent, (e)=> {
+        fs.writeFile(`./filters/${name}.js`, filterContent, (e) => {
             if (e) throw (e);
-            console.log(chalk.green.bold(`Le filtre "${name}" a été ajouté`));
+            console.log(chalk.green.bold(`The filter "${name}" has been added`));
         })
     } catch (error) {
-        console.log(chalk.red.bold(`Le filtre "${name}" n'a pas pu être crée à cause d'une erreur`));    
+        console.log(chalk.red.bold(`The filter "${name}" could not be added`, error.message));
     }
 }
+
 function deleteFilter(name) {
-    console.log(chalk.green.bold(`Le filtre "${name}" a été supprimé`));
+    try {
+        fs.unlink(`./filters/${name}.js`, (e) => {
+            if (e) throw (e);
+            console.log(chalk.green.bold(`The filter "${name}" has been deleted`));
+        });
+    } catch (error) {
+        console.log(chalk.red.bold(`The filter "${name}" could not be deleted`, error.message));
+    }
 }
 
 module.exports = {
