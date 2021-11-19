@@ -7,11 +7,18 @@ const configContent = `{ "steps": { "3": { "filter": "test.js", "params": [], "n
 
 function install(name) {
     try {
-        clone('https://github.com/PipeFramework/core.git', `./${name}`, (e)=>{if(e)throw(e)})
-        console.log(`cd ${process.cwd()}/${name}`);
+        clone('https://github.com/PipeFramework/core.git', `./${name}`, (e)=>{
+            if(e) {
+                console.log(chalk.red.bold('The directory already exist'));
+            } else {
+                console.log(chalk.green.bold(`The projet "${name}" has been successfully installed`));
+                console.log(chalk.yellow('===Installation Guide==='));
+                console.log(chalk.yellow('To start the projet move to the directory \nthen use the command "npm start"'));
+                console.log(chalk.yellow('========================'));
+            }
+            })
         exec(`npm i --prefix ./${name}`, (error, stdout, stderr) => {
             if (error) {
-                console.log(process.cwd);
                 console.log(`error: ${error.message}`);
                 return;
             }
@@ -19,14 +26,12 @@ function install(name) {
                 console.log(`stderr: ${stderr}`);
                 return;
             }
-            console.log(`stdout: ${stdout}`);
         });
 
     } catch (error) {
         console.log(chalk.red.bold(`The filter "${name}" could not be added`, error.message));
     }
 
-    console.log(chalk.green.bold(`The projet "${name}" has been successfully installed`));
 }
 
 module.exports = install;

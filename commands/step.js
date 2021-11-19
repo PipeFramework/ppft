@@ -33,7 +33,7 @@ function deleteStep(id) {
 
         console.log(chalk.green.bold(`The step "${id}" has been deleted`));
     } catch (error) {
-        console.log(chalk.red.bold(`The step "${name}" could not be added`, error.message));
+        console.log(chalk.red.bold(`The step "${name}" could not be deleted`, error.message));
     }
 }
 
