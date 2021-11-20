@@ -1,4 +1,4 @@
-# ppft
+# ppft-cli
 
 # Members
 - Auriane LABILLLE
@@ -22,7 +22,7 @@ L’arborescence des fichiers du framework est la suivante :
 # Getting started
 Ce projet est packagé dans un module nodeJS NPM. Cet outil doit être installé avec la commande : `npm install ppft-cli -g`.
 
-Afin de créer un projet avec une configuration vierge, exécuter la commande suivante : `ppft new`.
+Afin de créer un projet avec une configuration vierge, exécuter la commande suivante : `ppft new <name>`.
 
 Afin de lancer le framework, exécuter la commande suivante : `npm start`.
 
